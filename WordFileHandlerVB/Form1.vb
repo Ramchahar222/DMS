@@ -63,14 +63,13 @@ Public Class Form1
     'End Sub
 
     Private Sub btnEdit_Click_1(sender As Object, e As EventArgs) Handles btnEdit.Click
-        'Dim wordFile As WordFile = DatabaseHelper.GetWordFile(1)
+
         WordFile = DatabaseHelper.GetWordFile(1)
         If WordFile IsNot Nothing Then
             Dim customPath As String = "C:\Users\Oasis\source\repos\Wordfile\"
             If Not Directory.Exists(customPath) Then
                 Directory.CreateDirectory(customPath)
             End If
-            'Dim tempFilePath As String = Path.Combine(customPath, $"TempWordFile_{DateTime.Now:yyyyMMdd_HHmmss}.docx")
             Dim tempFilePath As String = Path.Combine(customPath, "TempWordFile.docx")
             File.WriteAllBytes(tempFilePath, WordFile.FileData)
 
