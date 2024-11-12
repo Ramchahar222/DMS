@@ -26,41 +26,6 @@ Public Class Form1
     End Function
 
     Private WordFile As WordFile
-    'Private Sub btnEdit_Click_1(sender As Object, e As EventArgs) Handles btnEdit.Click
-    '    WordFile = DatabaseHelper.GetWordFile(1)
-
-    '    If WordFile IsNot Nothing Then
-    '        Dim customPath As String = "C:\Users\Oasis\source\repos\Wordfile\"
-    '        If Not Directory.Exists(customPath) Then
-    '            Directory.CreateDirectory(customPath)
-    '        End If
-    '        Dim tempFilePath As String = Path.Combine(customPath, "TempWordFile.doc")
-    '        File.WriteAllBytes(tempFilePath, WordFile.FileData)
-    '        If IsFileInUse(tempFilePath) Then
-    '            MessageBox.Show("The file is currently open in another application.")
-    '            Return
-    '        End If
-    '        Dim appWord As Object = CreateObject("Word.Application")
-    '        appWord.Visible = False
-    '        appWord.Documents.Open(tempFilePath)
-    '        Dim pdfFilePath As String = Path.Combine(customPath, "TempWordFile.pdf")
-    '        appWord.ActiveDocument.SaveAs(pdfFilePath, 17)
-    '        appWord.ActiveDocument.Close()
-    '        appWord.Quit()
-
-    '        ' Integrating Edraw ActiveX Control
-    '        'AxEDOffice1.Open(tempFilePath)
-    '        'AxEDOffice1.WordDisableCopyHotKey(True)
-    '        'AxEDOffice1.WordDisableDragAndDrop(True)
-    '        'AxEDOffice1.WordDisablePrintHotKey(True)
-    '        'AxEDOffice1.WordDisableSaveHotKey(True)
-    '        'AxEDOffice1.DisableViewRightClickMenu(True)
-    '        'AxEDOffice1.ProtectDoc(EDOfficeLib.WdProtectType.wdAllowOnlyFormFields)
-
-    '    Else
-    '        MessageBox.Show("File not found.")
-    '    End If
-    'End Sub
 
     Private Sub btnEdit_Click_1(sender As Object, e As EventArgs) Handles btnEdit.Click
         WordFile = DatabaseHelper.GetWordFile(1)
