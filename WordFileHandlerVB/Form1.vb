@@ -63,7 +63,6 @@ Public Class Form1
     'End Sub
 
     Private Sub btnEdit_Click_1(sender As Object, e As EventArgs) Handles btnEdit.Click
-
         WordFile = DatabaseHelper.GetWordFile(1)
         If WordFile IsNot Nothing Then
             Dim customPath As String = "C:\Users\Oasis\source\repos\Wordfile\"
